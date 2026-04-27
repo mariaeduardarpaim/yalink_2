@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-yealink-text bg-yealink-gray;
+  }
+}
+
+@layer utilities {
+  .mesh-bg {
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(168,100%,42%,0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(196,56%,23%,0.5) 0px, transparent 50%);
+  }
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+}
